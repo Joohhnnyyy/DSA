@@ -1,13 +1,22 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-int main(){
-  vector<int> v{1,2,4,2,1,3,6,5,5,6,4};
-  cout << "The size of the vector is: " << v.size() << endl;
-  int XORofvector = 0;
-  for(int i = 0 ; i<v.size() ;i++){
-    XORofvector = XORofvector ^ v[i];
+int UniqueElement(vector<int> &arr){
+  int XorOfAll = 0;
+  for(auto i : arr){
+    XorOfAll = XorOfAll ^ i;
   }
-  cout<<"Unique element in the vector is: "<<XORofvector<<endl;
+  return XorOfAll;
+}
+
+int main(){
+  int n;
+  cout<<"Enter the number of elements: "<<endl;
+  cin>>n;
+  vector<int> arr(n);
+  cout<<"Enter the elements: "<<endl;
+  for(auto &i : arr)
+    cin>>i;
+  cout << "Unique element is : " << UniqueElement(arr) << endl;
   return 0;
 }
