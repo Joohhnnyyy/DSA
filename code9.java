@@ -10,7 +10,7 @@ public class code9 {
   public static void main(String[] args) {
     ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1));
     int start = 0 ,end = arr.size() - 1;
-    while(start < end){
+    while(start != end){
       if(arr.get(start) == 0){
         start++;
       }

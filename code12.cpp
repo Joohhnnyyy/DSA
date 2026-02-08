@@ -5,7 +5,7 @@ int main()
 {
   vector<int> arr{0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1};
   int start = 0, end = arr.size() - 1;
-  while (start < end)
+  while (start != end)
   {
     if (arr[start] == 0)
     {
